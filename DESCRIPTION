@@ -1,38 +1,25 @@
 Package: biocentralapp
 Title: biocentralapp
 Version: 0.0.0.9000
-Authors@R:
-  c(person(given = "Ziyu",
-           family = "Zhang",
-           role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "s212657@dtu.dk"), 
-    person(given = "Mathias",
-           family = "Stokholm",
-           role = "aut",
-           email = "s184257@student.dtu.dk"),
-    person(given = "Dave Edison",
-           family = "Rojas Calderon",
-           role = "aut",
-           email = "s212767@student.dtu.dk"),
-    person(given = "Karolina Zofia",
-           family = "Krzesinska",
-           role = "aut",
-           email = "s212842@student.dtu.dk"),
-    person(given = "Danli",
-           family = "Shen",
-           role = "aut",
-           email = "s185387@student.dtu.dk"))
+Authors@R:c(
+    person("Ziyu", "Zhang", , "s212657@dtu.dk", role = c("aut", "cre")),
+    person("Mathias", "Stokholm", , "s184257@student.dtu.dk", role = "aut"),
+    person("Dave Edison", "Rojas Calderon", , "s212767@student.dtu.dk", role = "aut"),
+    person("Karolina Zofia", "Krzesinska", , "s212842@student.dtu.dk", role = "aut"),
+    person("Danli", "Shen", , "s185387@student.dtu.dk", role = "aut")
+  )
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.3.2),
+    magrittr,
     shiny (>= 1.7.1)
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.1.2
 Suggests: 
     spelling,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Encoding: UTF-8
 Language: en-US
+LazyData: true
+RoxygenNote: 7.1.2

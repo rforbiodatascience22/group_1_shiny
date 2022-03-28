@@ -14,8 +14,9 @@ app_ui <- function(request) {
       tabsetPanel(
         tabPanel(title = "panel1",
                  "module1"),
-        tabPanel(title = "panel2",
-                 "module2")
+        tabPanel(title = "plotting",
+                 "plotting",
+                 mod_plotting_ui("plotting_1"))
       )
     )
   )
