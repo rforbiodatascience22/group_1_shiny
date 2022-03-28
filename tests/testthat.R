@@ -1,4 +1,4 @@
 library(testthat)
-library(myshinyapp)
+library(biocentralapp)
 
-test_check("myshinyapp")
+test_check("biocentralapp")
