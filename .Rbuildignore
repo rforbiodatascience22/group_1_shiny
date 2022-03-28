@@ -7,3 +7,9 @@ $run_dev.*
 ^myshinyapp\.Rcheck$
 ^myshinyapp.*\.tar\.gz$
 ^myshinyapp.*\.tgz$
+^biocentralapp\.Rcheck$
+^biocentralapp.*\.tar\.gz$
+^biocentralapp.*\.tgz$
+^LICENSE\.md$
+^README\.Rmd$
+^CODE_OF_CONDUCT\.md$
