@@ -1,7 +1,27 @@
-Package: myshinyapp
-Title: PKG_TITLE
+Package: biocentralapp
+Title: biocentralapp
 Version: 0.0.0.9000
-Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
+Authors@R:
+  c(person(given = "Ziyu",
+           family = "Zhang",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s212657@dtu.dk"), 
+    person(given = "Mathias",
+           family = "Stokholm",
+           role = "aut",
+           email = "s184257@student.dtu.dk"),
+    person(given = "Dave Edison",
+           family = "Rojas Calderon",
+           role = "aut",
+           email = "s212767@student.dtu.dk"),
+    person(given = "Karolina Zofia",
+           family = "Krzesinska",
+           role = "aut",
+           email = "s212842@student.dtu.dk"),
+    person(given = "Danli",
+           family = "Shen",
+           role = "aut",
+           email = "s185387@student.dtu.dk"))
 Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
@@ -10,4 +30,9 @@ Imports:
     shiny (>= 1.7.1)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
+Suggests: 
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US

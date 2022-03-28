@@ -13,17 +13,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-# myshinyapp
+# biocentralapp
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of myshinyapp is to ...
+The goal of biocentralapp is to ...
 
 ## Installation
 
-You can install the development version of myshinyapp from [GitHub](https://github.com/) with:
+You can install the development version of biocentralapp from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -35,7 +34,7 @@ devtools::install_github("rforbiodatascience22/group_1_shiny")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(myshinyapp)
+library(biocentralapp)
 ## basic example code
 ```
 
