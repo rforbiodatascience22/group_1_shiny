@@ -10,13 +10,21 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
-      h1("biocentralapp"),
+      h1("Biocentral"),
+      p("For all your central dogma needs"),
       tabsetPanel(
+<<<<<<< HEAD
         tabPanel(title = "panel1",
                  "module1"),
         tabPanel(title = "plotting",
                  "plotting",
                  mod_plotting_ui("plotting_1"))
+=======
+        tabPanel(title = "DNA Expression",
+                 mod_dna_expression_ui("dna_expression_1")),
+        tabPanel(title = "panel2",
+                 "module2")
+>>>>>>> c3e62a503143d3a0f1380a0092f246c7b16ec134
       )
     )
   )
