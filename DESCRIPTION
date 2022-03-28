@@ -1,7 +1,7 @@
 Package: biocentralapp
 Title: biocentralapp
 Version: 0.0.0.9000
-Authors@R:c(
+Authors@R: c(
     person("Ziyu", "Zhang", , "s212657@dtu.dk", role = c("aut", "cre")),
     person("Mathias", "Stokholm", , "s184257@student.dtu.dk", role = "aut"),
     person("Dave Edison", "Rojas Calderon", , "s212767@student.dtu.dk", role = "aut"),
@@ -12,6 +12,7 @@ Description: PKG_DESC.
 License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
+    ggplot2,
     golem (>= 0.3.2),
     magrittr,
     shiny (>= 1.7.1)
