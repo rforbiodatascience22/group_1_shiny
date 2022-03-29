@@ -15,17 +15,17 @@ mod_dna_expression_ui <- function(id){
              uiOutput(ns("DNA"))
       ),
       column(width = 4,
-             numericInput(ns("random_dna_length"),
+             numericInput(ns("dna_length"),
                           label = "Random DNA length",
                           value = 3000,
                           min = 3,
                           max = 10**6,
                           step = 1),
-             actionButton(ns("random_dna_button"),
+             actionButton(ns("generate_dna"),
                           label = "Generate random DNA")
       )
     ),
-    verbatimTextOutput(ns("peptide_sequence"))
+    verbatimTextOutput(ns("peptide"))
   )
 }
 
@@ -36,6 +36,7 @@ mod_dna_expression_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     dna <- reactiveVal()
+    codon_table <- biocentral::codon_table
 
     output$DNA <- renderUI({
       textAreaInput(
@@ -50,27 +51,26 @@ mod_dna_expression_server <- function(id){
 
     observeEvent(input$generate_dna, {
       dna(
-        biocentral::create_dna_sequence(input$dna_length)
+        biocentral::createdna(input$dna_length)
       )
     })
 
-    output$peptide <- renderText({
-      # Ensure input is not NULL and is longer than 2 characters
-      if(is.null(input$DNA)){
-        NULL
-      } else if(nchar(input$DNA) < 3){
-        NULL
-      } else{
-        input$DNA %>%
-          toupper() %>%
-          biocentral::dna_to_rna() %>%
-          biocentral::codons_start() %>%
-          biocentral::codon2amino()
-      }
+    observeEvent(input$DNA,{
+      output$peptide <- renderText({
+        # Ensure input is not NULL and is longer than 2 characters
+        if(is.null(input$DNA)){
+          NULL
+        } else if(nchar(input$DNA) < 3){
+          NULL
+        } else{
+          input$DNA %>%
+            toupper() %>%
+            biocentral::dna_to_rna() %>%
+            biocentral::codon_start() %>%
+            biocentral::codon2amino()
+        }
+      })
     })
-
-
-
   })
 }
 

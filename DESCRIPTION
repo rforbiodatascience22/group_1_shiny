@@ -16,6 +16,8 @@ Imports:
     golem (>= 0.3.2),
     magrittr,
     shiny (>= 1.7.1)
+Remotes:
+    rforbiodatascience22/group_1_package
 Suggests: 
     spelling,
     testthat (>= 3.0.0)
@@ -24,3 +26,5 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)

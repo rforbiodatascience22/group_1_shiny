@@ -36,7 +36,18 @@ mod_plotting_ui <- function(id){
 mod_plotting_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
+    #Plotting module server logic
+    observeEvent(input$peptide, {
+      output$abundance <- renderPlot({
+        if(input$peptide == ""){
+          NULL
+        } else{
+          input$peptide %>%
+            biocentral:::seq_count() +
+            ggplot2::theme(legend.position = "none")
+        }
+      })
+    })
   })
 }
 
