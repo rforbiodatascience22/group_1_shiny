@@ -15,6 +15,7 @@ Imports:
     ggplot2,
     golem (>= 0.3.2),
     magrittr,
+    pkgload,
     shiny (>= 1.7.1)
 Remotes:
     rforbiodatascience22/group_1_package
