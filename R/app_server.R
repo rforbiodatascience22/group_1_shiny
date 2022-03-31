@@ -5,7 +5,6 @@
 #' @import shiny
 #' @noRd
 #' @importFrom magrittr %>%
-#' @import biocentral
 
 app_server <- function(input, output, session) {
   # Your application server logic
